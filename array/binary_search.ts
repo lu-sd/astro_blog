@@ -19,3 +19,6 @@ function binarySearch(arr: number[], target: number) {
 }
 const a = binarySearch([-1, 0, 3, 5, 6, 12], 7);
 console.log("result = ", a);
+
+// if not found ,please return the insert location
+// 18 --> return right
