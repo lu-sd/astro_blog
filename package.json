@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2"
   }
 }
