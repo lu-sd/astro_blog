@@ -17,28 +17,29 @@ function removeNthNode(head: ListNode | null, n: number): ListNode | null {
   // return dummy.next;
 
   let dummy = new ListNode(0, head);
-  let pre = dummy,
-    cur = dummy;
+  let slow = dummy,
+    fast = dummy;
 
-  while (--n) {
-    if (cur.next === null) {
+  while (n > 0) {
+    if (fast.next === null) {
       // If the linked list is shorter than n, return head
       return head;
     }
-    cur = cur.next;
+    fast = fast.next;
+    n--;
   }
 
   // Move both pointers until cur reaches the last node
-  while (cur.next && pre.next) {
-    pre = pre.next;
-    cur = cur.next;
+  while (fast.next && slow.next) {
+    slow = slow.next;
+    fast = fast.next;
   }
 
   // Remove the node by updating pre.next
-  if (pre.next === null) {
+  if (slow.next === null) {
     return dummy.next;
   }
-  pre.next = pre.next.next;
+  slow.next = slow.next.next;
 
   // Return the head of the modified linked list
   return dummy.next;
