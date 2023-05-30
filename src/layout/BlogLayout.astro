@@ -1,0 +1,16 @@
+---
+import BaseLayout from "~/layout/BaseLayout.astro";
+import Header from "~/components/header.astro";
+import ThemeSwitcher from "~/components/theme-switcher.astro";
+import Footer from "~/components/footer.astro";
+---
+
+<BaseLayout>
+  <Header twCSS="border-default bg-default text-default" includeScorll="false">
+    <ThemeSwitcher twCSS="ml-0 scale-100" />
+  </Header>
+  <section class="mx-auto mb-28 max-w-3xl">
+    <slot />
+  </section>
+  <Footer />
+</BaseLayout>

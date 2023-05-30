@@ -1,0 +1,83 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "Typescript",
+    icon: "frameworks/typescript",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+
+  {
+    title: "Svelte",
+    icon: "frameworks/svelte",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "Tailwind",
+    icon: "frameworks/tailwindcss",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "NextJS",
+    icon: "frameworks/nextjs",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "Astro",
+    icon: "frameworks/astro",
+    url: "https://vuejs.org/",
+  },
+
+  {
+    title: "Mysql",
+    icon: "frameworks/mysql",
+    url: "https://www.solidjs.com/",
+  },
+  {
+    title: "Prisma",
+    icon: "frameworks/prisma",
+    url: "https://lit.dev/",
+  },
+  {
+    title: "tRPC",
+    icon: "frameworks/trpc",
+    url: "https://lit.dev/",
+  },
+  {
+    title: "AWS",
+    icon: "frameworks/aws",
+    url: "https://lit.dev/",
+  },
+  {
+    title: "Python",
+    icon: "frameworks/python",
+    url: "https://lit.dev/",
+  },
+  {
+    title: "Git",
+    icon: "frameworks/git",
+    url: "https://lit.dev/",
+  },
+];
+---
+
+<ContentSection title="Skill sets" id="compatibility">
+  <Fragment slot="lead">
+    List skills: <span class="text-primary">Cloud Computation</span>,
+    <span class="text-primary">Web development</span>
+    and <span class="text-primary">algorithm</span>.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Skills"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+</ContentSection>
