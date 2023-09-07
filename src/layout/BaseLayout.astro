@@ -3,8 +3,7 @@ import "@fontsource/inter/variable.css";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
-const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+const description = "Personal Blog.";
 ---
 
 <!DOCTYPE html>
@@ -14,19 +13,18 @@ const description =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
-
-    <title>Astro Landing Page</title>
-    <meta name="description" content={description} />
-
-    <!-- social media -->
-    <meta property="og:title" content="Astro" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- initialize theme -->
-    <script is:inline>
+    <title>Astro Landing Page</title><meta
+      name="description"
+      content={description}
+    /><meta property="og:title" content="Astro" /><meta
+      property="og:type"
+      content="website"
+    /><meta property="og:description" content={description} /><meta
+      property="og:url"
+      content={site}
+    /><meta name="twitter:card" content="summary_large_image" /><script
+      is:inline
+    >
       const themeSaved = localStorage.getItem("theme");
 
       if (themeSaved) {
@@ -47,10 +45,11 @@ const description =
               : "light";
           }
         });
-    </script>
-  </head>
+    </script></head
+  >
+
   <body
-    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+    class="flex min-h-screen flex-col overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
     <slot />
   </body>
